@@ -14,9 +14,12 @@ const MoviesCard: MoviesCardComp = ({ movie }) => {
   return (
     <div className="card">
       {/* Background video */}
-      {/* <div className="card__background_video">
-        <video></video>
-      </div> */}
+      <div className="card__background_video">
+        <video autoPlay loop muted>
+          <source src={`/vids/${background_video}`} type="video/mp4" />
+          Your browser does not support HTML video.
+        </video>
+      </div>
       {/* Logo */}
       <img className="card__logo" src={`/img/${logo_img}`} alt={`${name} logo`} loading="lazy" />
     </div>
