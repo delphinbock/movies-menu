@@ -1,0 +1,59 @@
+@import 'constants';
+@import 'mixins';
+
+@include declare-font-face($urlSite, $fontPath, $fontNameFile, $fontName);
+
+#MoviesMenu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  background: transparent;
+  padding: 2rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    padding: 20px;
+
+    &__logo {
+      position: relative;
+      width: 60%;
+      aspect-ratio: 16 / 9;
+    }
+
+    &__background_video {
+    }
+
+    // Style de l'élément "title" à l'intérieur de "card"
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    // Style de l'élément "content" à l'intérieur de "card"
+    &__content {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    // Style du modificateur "highlighted" pour "card"
+    &--highlighted {
+      background-color: #ffecb3;
+      border-color: #ffc107;
+    }
+  }
+}
