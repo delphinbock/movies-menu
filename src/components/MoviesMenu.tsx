@@ -1,5 +1,5 @@
 // React
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // Types
 import { MoviesDataObjProps, MoviesCardComp, MoviesListComp } from '../types/MoviesMenuType'
@@ -11,15 +11,33 @@ const MoviesCard: MoviesCardComp = ({ movie }) => {
   // Destructuring
   const { name, background_video, logo_img } = movie
 
+  // Video reference
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Event handlers for playing and pausing the video
+  const handleMouseEnter = () => {
+    if (videoRef.current && videoRef.current.paused) {
+      videoRef.current.play()
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause()
+
+      // Réinitialize the video
+      videoRef.current.currentTime = 0
+    }
+  }
+
   return (
-    <div className="card">
+    <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {/* Background video */}
-      <div className="card__background_video">
-        <video autoPlay loop muted>
-          <source src={`/vids/${background_video}`} type="video/mp4" />
-          Your browser does not support HTML video.
-        </video>
-      </div>
+      <video className="card__background_video" loop muted ref={videoRef}>
+        <source src={`/vids/${background_video}`} type="video/mp4" />
+        Your browser does not support HTML video.
+      </video>
+
       {/* Logo */}
       <img className="card__logo" src={`/img/${logo_img}`} alt={`${name} logo`} loading="lazy" />
     </div>
@@ -63,26 +81,3 @@ const MoviesMenu = () => {
 }
 
 export default MoviesMenu
-
-/* <div class="container">
-<div class="box">
-<video width="400">
-  <source src="video (1).mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-</div>
-</div>
-</body>
-</html>
-<script type="javascript">
-const clip = document.querySelectorAll('.clip');
-for (Let i = 0; i < clip.1ength; i++) {
-clip[i].addEventListener('mouseenter', function(e){
-console.log('test');
-clip[i].play();
-})
-for (Let i = 0; i < clip.1ength; i++) {
-clip[i].addEventListener('mouseout', function(e){
-clip[i].pause();
-})
-</script> */
