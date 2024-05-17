@@ -14,18 +14,32 @@ const MoviesCard: MoviesCardComp = ({ movie }) => {
   // Video reference
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Event handlers for playing and pausing the video
+  // State for tracking the timeout ID
+  const [timeoutId, setTimeoutId] = useState<number | null>(null)
+
+  // Add a setTimeout to avoid many errors
+  // Play video event handler
   const handleMouseEnter = () => {
     if (videoRef.current && videoRef.current.paused) {
-      videoRef.current.play()
+      const id = window.setTimeout(() => {
+        videoRef.current && videoRef.current.play()
+      }, 200)
+      setTimeoutId(id)
     }
   }
 
+  // Stop video event handler
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause()
 
-      // Réinitialize the video
+      // Clear the timeout if it's set
+      if (timeoutId !== null) {
+        window.clearTimeout(timeoutId)
+        setTimeoutId(null)
+      }
+
+      // Réinitialiser la vidéo
       videoRef.current.currentTime = 0
     }
   }
