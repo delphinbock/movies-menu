@@ -1,0 +1,90 @@
+@import 'constants';
+@import 'mixins';
+
+@include declare-font-face($urlSite, $fontPath, $fontNameFile, $fontName);
+
+#MoviesMenu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  padding: 2rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      -ms-transform: scale(1.05); /* IE 9 */
+      -webkit-transform: scale(1.05); /* Safari 3-8 */
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow: inset 0 0 0 3px white;
+      border: 1px solid white;
+      border-radius: 1.25rem;
+
+      & > .card__background_video {
+        padding: 6px;
+        box-sizing: border-box;
+        border-radius: 20px;
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      aspect-ratio: 16 / 9;
+      z-index: 2;
+    }
+
+    &__background_video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      border-radius: 14px;
+
+      &:hover {
+        z-index: 1;
+      }
+    }
+
+    // Style de l'élément "title" à l'intérieur de "card"
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    // Style de l'élément "content" à l'intérieur de "card"
+    &__content {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    // Style du modificateur "highlighted" pour "card"
+    &--highlighted {
+      background-color: #ffecb3;
+      border-color: #ffc107;
+    }
+  }
+}
