@@ -1,5 +1,6 @@
 // Movies data object
 interface MoviesDataObjProps {
+  id: number;
   name: string;
   background_video: string;
   logo_img: string;

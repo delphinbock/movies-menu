@@ -1,11 +1,11 @@
 // React
 import React, { useEffect, useRef, useState } from 'react'
 
+// Router
+import { Link } from 'react-router-dom'
+
 // Types
 import { MoviesDataObjProps, MoviesCardComp, MoviesListComp } from '../types/MoviesMenuType'
-
-// Styles
-import '../styles/MoviesMenu.scss'
 
 const MoviesCard: MoviesCardComp = ({ movie }) => {
   // Destructuring
@@ -45,7 +45,7 @@ const MoviesCard: MoviesCardComp = ({ movie }) => {
   }
 
   return (
-    <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <Link className="card" to={`/movie-details/${name}`} state={{ movie }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {/* Background video */}
       <video className="card__background_video" loop muted ref={videoRef}>
         <source src={`/vids/${background_video}`} type="video/mp4" />
@@ -54,7 +54,7 @@ const MoviesCard: MoviesCardComp = ({ movie }) => {
 
       {/* Logo */}
       <img className="card__logo" src={`/img/${logo_img}`} alt={`${name} logo`} loading="lazy" />
-    </div>
+    </Link>
   )
 }
 
