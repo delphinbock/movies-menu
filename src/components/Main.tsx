@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components
-import MoviesMenu from './MoviesMenu'
+import MoviesMenu from './MoviesCategoriesMenu'
 
 const Main = () => {
   return (

@@ -1,22 +1,22 @@
 // Movies data object
-interface MoviesDataObjProps {
+interface MoviesCategoriesDataObjProps {
   id: number;
   name: string;
   background_video: string;
   logo_img: string;
 }
 
-type MoviesCardComp = React.FC<{ movie: MoviesDataObjProps }>;
+type MoviesCategoriesCardComp = React.FC<{ moviesCategoryDataObj: MoviesCategoriesDataObjProps }>;
 
 // Movies data list
-interface MoviesListProps {
-  moviesDataObjArr: MoviesDataObjProps[];
+interface MoviesCategoriesListProps {
+  moviesCategoriesDataObjArr: MoviesCategoriesDataObjProps[];
 }
 
-type MoviesListComp = React.FC<MoviesListProps>;
+type MoviesCategoriesListComp = React.FC<MoviesCategoriesListProps>;
 
 export type {
-  MoviesDataObjProps,
-  MoviesCardComp,
-  MoviesListComp
+  MoviesCategoriesDataObjProps,
+  MoviesCategoriesCardComp,
+  MoviesCategoriesListComp
 }
