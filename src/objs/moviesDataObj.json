@@ -1,8 +1,0 @@
-[
-  { "name": "disney", "background_video": "disney.mp4", "logo_img": "disney.svg" },
-  { "name": "pixar", "background_video": "pixar.mp4", "logo_img": "pixar.svg" },
-  { "name": "marvel", "background_video": "marvel.mp4", "logo_img": "marvel.svg" },
-  { "name": "star wars", "background_video": "star_wars.mp4", "logo_img": "star_wars.svg" },
-  { "name": "national geographic", "background_video": "national_geographic.mp4", "logo_img": "national_geographic.svg" },
-  { "name": "star", "background_video": "star.mp4", "logo_img": "star.svg" }
-]

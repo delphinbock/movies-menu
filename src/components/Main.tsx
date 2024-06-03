@@ -1,6 +1,8 @@
-import React from 'react' // Import React
-import '../styles/MoviesMenu.scss'
-import MoviesMenu from './MoviesMenu'
+// React
+import React from 'react'
+
+// Components
+import MoviesMenu from './MoviesCategoriesMenu'
 
 const Main = () => {
   return (

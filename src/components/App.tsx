@@ -1,17 +1,25 @@
-import React from 'react' // Import React
-import Header from './Header' // Correct the path to Header component
-import Main from './Main' // Correct the path to Main component
-import Footer from './Footer'
+// React
+import React from 'react'
+
+// Router
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
+
+// Components
+import Home from './Home'
+import MoviesCategoryDetails from './MoviesCategoryDetails'
 
 // Styles
-import '../styles/App.scss'
+import '../styles/main.scss'
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie-details/:name" element={<MoviesCategoryDetails />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

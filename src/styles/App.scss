@@ -1,6 +1,3 @@
-@import 'constants';
-@import 'mixins';
-
 @include declare-font-face($urlSite, $fontPath, $fontNameFile, $fontName);
 
 .App-link {
