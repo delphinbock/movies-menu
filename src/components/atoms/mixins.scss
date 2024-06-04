@@ -1,3 +1,10 @@
+// Reset & redefine settings for all elemnts of project
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Reset box-sizing for all elements
+}
+
 // Mixin to handle responsive breakpoints
 @mixin breakpoint($breakpoint, $direction: min) {
   // Check if the supplied breakpoint exists in our breakpoints map
@@ -32,15 +39,15 @@
 }
 
 // Mixin to declare a font-face with various font sources
-@mixin declare-font-face($urlSite, $fontPath, $fontNameFile, $fontName) {
+@mixin declare-font-face($fontPath, $fontNameFile, $fontName) {
   @font-face {
     font-family: $fontName;
     src:
-      url($urlSite + $fontPath + $fontNameFile + '.woff') format('woff'),
-      url($urlSite + $fontPath + $fontNameFile + '.eot'),
-      url($urlSite + $fontPath + $fontNameFile + '.eot?#iefix') format('embedded-opentype'),
-      url($urlSite + $fontPath + $fontNameFile + '.ttf') format('truetype'),
-      url($urlSite + $fontPath + $fontNameFile + '.svg') format('svg');
+      url('../atoms/fonts/' + $fontNameFile + '.woff') format('woff'),
+      url('../atoms/fonts/' + $fontNameFile + '.eot'),
+      url('../atoms/fonts/' + $fontNameFile + '.eot?#iefix') format('embedded-opentype'),
+      url('../atoms/fonts/' + $fontNameFile + '.ttf') format('truetype'),
+      url('../atoms/fonts/' + $fontNameFile + '.svg') format('svg');
     font-weight: 100 299;
     font-style: normal;
     font-display: swap;

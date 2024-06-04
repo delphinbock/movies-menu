@@ -1,10 +1,10 @@
 // React
-import React from 'react'
+import React, { FC } from 'react'
 
 // Components
-import MoviesMenu from './MoviesCategoriesMenu'
+import MoviesMenu from '../organisms/MoviesCategoriesMenu/MoviesCategoriesMenu'
 
-const Main = () => {
+const Main: FC = () => {
   return (
     <main>
       <section>

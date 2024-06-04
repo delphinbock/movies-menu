@@ -3,10 +3,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 // Styles
-import './styles/index.scss'
+import '../src/index.scss'
 
 // Components
-import App from './components/App'
+import App from './components/pages/App'
 
 // Tools
 import reportWebVitals from './reportWebVitals'

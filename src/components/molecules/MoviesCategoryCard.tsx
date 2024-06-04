@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
 // Components
-import { MoviesCategoriesCardComp } from '../types/MoviesMenuType'
+import { MoviesCategoriesCardComp } from '../../types/MoviesMenuType'
 
 const MoviesCard: MoviesCategoriesCardComp = ({ moviesCategoryDataObj }) => {
   // Destructuring

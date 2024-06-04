@@ -1,20 +1,20 @@
 // React
-import React, { useEffect, useState, Suspense, lazy } from 'react'
+import React, { FC, useEffect, useState, Suspense, lazy } from 'react'
 
 // Types
-import { MoviesCategoriesDataObjProps } from '../types/MoviesMenuType'
+import { MoviesCategoriesDataObjProps } from '../../../types/MoviesMenuType'
 
 // Component
-const MoviesCategoriesList = lazy(() => import('./MoviesCategoriesList'))
+const MoviesCategoriesList = lazy(() => import('../../atoms/MoviesCategoriesList'))
 
-const MoviesMenu = () => {
+const MoviesMenu: FC = () => {
   // States
   const [MoviesCategoriesDataObjArr, setMoviesCategoriesDataObjArr] = useState<MoviesCategoriesDataObjProps[]>([])
 
   const fetchMoviesCategoriesData = async () => {
     try {
       // Get local data object
-      const response = await import('../objs/moviesCategoriesDataObj.json')
+      const response = await import('../../../objs/moviesCategoriesDataObj.json')
 
       // Set the state categories movies
       setMoviesCategoriesDataObjArr(response.default)

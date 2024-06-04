@@ -1,16 +1,19 @@
+@import './components/atoms/constants.scss';
+@import './components/atoms/mixins.scss';
+
+$background-image-path: '../public/img/background_html.png';
+
 * {
-  box-sizing: border-box;
+  @include reset;
 }
 
 html {
-  background: gray;
+  background: url($background-image-path) 50% / cover no-repeat fixed;
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {

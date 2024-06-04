@@ -1,0 +1,13 @@
+// Defaults styles
+@import '../atoms/constants.scss';
+@import '../atoms/mixins.scss';
+
+// Main styles
+@import '../../index.scss';
+
+// Layout styles
+@import '../organisms/Header/Header.scss';
+@import '../organisms/Footer/Footer.scss';
+
+// Component styles
+@import '../organisms/MoviesCategoriesMenu/MoviesCategoriesMenu.scss';

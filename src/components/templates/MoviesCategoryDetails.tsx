@@ -1,10 +1,10 @@
 // React
-import React from 'react'
+import React, { FC } from 'react'
 
 // Router
 import { useLocation, useParams } from 'react-router-dom'
 
-const MoviesCategoryDetails = () => {
+const MoviesCategoryDetails: FC = () => {
   // Data from URL parameters
   const { name } = useParams()
 
@@ -17,4 +17,4 @@ const MoviesCategoryDetails = () => {
   return <h1>{name}</h1>
 }
 
-export default MoviesCategoryDetails
+export default React.memo(MoviesCategoryDetails)

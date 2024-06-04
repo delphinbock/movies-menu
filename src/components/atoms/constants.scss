@@ -1,0 +1,97 @@
+// Dev URL
+$urlSite: 'http://localhost:3000';
+
+// Sandbox URL
+// $urlSite: 'https://sx3rs7-5173.csb.app/';
+
+// Path for fonts
+$fontPath: '/fonts/';
+
+// Font file name
+$fontNameFile: 'spaceranger';
+
+// Font name
+$fontName: 'Space Ranger';
+
+// Width for image items
+$imgItemsWidth: 6rem;
+
+// Breakpoints for responsive design
+$breakpoints: (
+  sm: (
+    min: 300px,
+    max: 675.98px,
+  ),
+  md: (
+    min: 676px,
+    max: 991.98px,
+  ),
+  lg: (
+    min: 992px,
+    max: 1199.98px,
+  ),
+  xl: (
+    min: 1200px,
+    max: 1399.98px,
+  ),
+  xxl: (
+    min: 1400px,
+    max: 2599.98px,
+  ),
+);
+
+// Fonts
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire/Inspire-Regular.f2199f841165c4ddbafcf177da3ef974.woff2') format('woff2');
+  font-weight: normal;
+  font-family: '_10guvpk0';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire/Inspire-Bold.4ff15ddc93445342649194969715b0b5.woff2') format('woff2');
+  font-weight: bold;
+  font-family: '_10guvpk0';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-jp/InspireJP-Regular.a281d8c1bb7a31a286f105e85c5ab61d.woff2') format('woff2');
+  font-weight: normal;
+  font-family: '_10guvpk1';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-jp/InspireJP-Bold.80e8028c88d61d72a4d61493f5454569.woff2') format('woff2');
+  font-weight: bold;
+  font-family: '_10guvpk1';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-kr/InspireKR-Regular.dd56826529a5cf37cf650680f7b063b0.woff2') format('woff2');
+  font-weight: normal;
+  font-family: '_10guvpk2';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-kr/InspireKR-Bold.6a7047549e067f2b357876a5010d9b89.woff2') format('woff2');
+  font-weight: bold;
+  font-family: '_10guvpk2';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-sc/InspireSC-Regular.68e9e726bd89ad507e25b4b6b30da8e4.woff2') format('woff2');
+  font-weight: normal;
+  font-family: '_10guvpk3';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-sc/InspireSC-Bold.4719e279dd9819eb5cff056e748f672d.woff2') format('woff2');
+  font-weight: bold;
+  font-family: '_10guvpk3';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-tc/InspireTC-Regular.3efeed4e08c4f73cc37b5d8532f28421.woff2') format('woff2');
+  font-weight: normal;
+  font-family: '_10guvpk4';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-tc/InspireTC-Bold.eff189de3b97c8997747afea80e455cc.woff2') format('woff2');
+  font-weight: bold;
+  font-family: '_10guvpk4';
+}
+@font-face {
+  src: url('https://static-assets.bamgrid.com/fonts/inspire-mini/InspireMini-Regular.cc1efb3ee8c2719dcee547487e15c2b7.woff2') format('woff2');
+  font-family: '_10guvpk5';
+}

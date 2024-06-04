@@ -2,10 +2,10 @@
 import React from 'react'
 
 // Component
-import MoviesCard from './MoviesCategoryCard'
+import MoviesCard from '../molecules/MoviesCategoryCard'
 
 // Types
-import { MoviesCategoriesListComp } from '../types/MoviesMenuType'
+import { MoviesCategoriesListComp } from '../../types/MoviesMenuType'
 
 const CategoriesMoviesList: MoviesCategoriesListComp = ({ moviesCategoriesDataObjArr }) => {
   return (
